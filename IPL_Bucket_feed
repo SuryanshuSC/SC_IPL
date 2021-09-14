@@ -125,7 +125,7 @@ with
       , if (views > 50 and lf_video ,concat('lf_video_', lang,'_',source), null) as lf_video_grp3
       , if (views > 50 and lf_video ,concat('lf_video_', lang,'_',L0_category), null) as lf_video_grp4
       , if (views > 50 and lf_video ,concat('lf_video_', lang,'_',L1_category), null) as lf_video_grp5
-      , if (views > 100 and ipl_post ,concat('ipl_post_', lang), null) as ipl_post_grp
+      , if (views > 100 and ipl_post ,concat('ipl_post_', lang), null) as ipl_post_grp --check for ifnull(isTimeTag, true)
     FROM counter_agg
     inner join post using (postId)
   )
